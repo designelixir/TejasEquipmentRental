@@ -14,6 +14,7 @@
   --gray-1:  #F2EFED;  /* warm off-white, good for backgrounds */
   --gray-2:    #D9D4D1;  /* warm light gray, borders/dividers */
   --gray-3:  #A89F9B;
+  --off-white: #f5f5f5;
   --navy: #031726;
   --br: 4px;
   --max-width: 1200px;
@@ -57,6 +58,8 @@ main {display: flex!important; width: 100%;}
 /* Buttons */
 button {font-weight: 600!important; letter-spacing: 0.5px; opacity: 0.8; transition: opacity 0.3s ease;}
 button:hover {opacity: 1!important;}
+.full-width-button { width: 100%; background: var(--orange); padding: 25px; text-align: center; font-size: 24px; text-transform: uppercase; color: var(--off-white)!important; transition: all 0.3s ease;}
+.full-width-button:hover {background: var(--dark-orange); cursor: pointer;}
 
 /* Nav Bar */
 .cart-date-pickers-component button {background: var(--navy)!important; border: 2px solid white!important; text-transform: uppercase; font-weight: 600;}
@@ -67,6 +70,7 @@ button:hover {opacity: 1!important;}
 
 /* fonts */
 h2 {font-size: clamp(36px, 3vw, 48px)!important; font-weight: 600!important; margin: 15px 0!important; padding: 0!important; line-height: 1.15!important;}
+
 p {font-size: clamp(18px, 1vw, 22px)!important; margin: 5px 0!important; padding: 0!important;}
 /* Slider */
 
@@ -82,11 +86,19 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 
 /* Homepage Popular Equipment Grid */
-
-.equipment-section-wrapper {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
+section {width: 100%;}
+.category-page-information {order: -1;}
+category {border: 2px solid blue; display: flex; align-items: center; justify-content: center; width: 100%; flex-direction: column; flex-grow: 1;}
+.category-title {border: 2px solid teal; min-width: 100vw; display: none;}
+.category-component .category-page-information .breadcrumb {min-width: 100vw; margin-bottom: -75px!important; padding: 25px 25px!important;}
+.category-component {display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; min-width: 100vw; flex-grow: 1;}
+.category-header-content {display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; min-width: 100vw; flex-grow: 1;}
+.equipment-section-wrapper {border-top: 8px solid var(--orange);background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
 .equipment-section { max-width: var(--max-width)!important; width: 100%; }
 .equipment-section-heading-container {padding: 50px 0;}
 .equipment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+@media (max-width: 1200px) {.equipment-section {padding: 0 25px;}}
 
 @media (max-width: 768px) {
   .equipment-grid { grid-template-columns: repeat(2, 1fr); }
@@ -96,39 +108,15 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
   .equipment-grid { grid-template-columns: 1fr; }
 }
 
-.equipment-card-image {background: white; aspect-ratio: 3/4; width: 100%; background-size: contain; background-position: center; background-repeat:no-repeat;}
+.equipment-card-image { aspect-ratio: 3/4; width: 100%; background-size: contain; background-position: center; background-repeat:no-repeat;}
+.equipment-card { border: 2px solid var(--gray-2); background: white; border-radius: var(--br); overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.equipment-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
 
-.equipment-card {
-  border: 2px solid var(--gray2);
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  border-radius: var(--br);
-  overflow: hidden;
-  background: #f5f5f5;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.equipment-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-.equipment-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}
-
-.equipment-card-label {
-  padding: 12px 16px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--navy);
-  letter-spacing: 0.3px;
-}
-
+.equipment-card-label {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/c0a9987623903fa7bd6265d0189248c1b03c8ee9/assets/title-bg.svg'); background-size: 90% auto; background-repeat: no-repeat; background-position: 0% 60%; padding: 10px; transition: all 0.2s ease;}
+.equipment-card:hover .equipment-card-label {background-size: 100% auto;}
+.equipment-card-label h4 {text-transform: uppercase!important; font-weight: 400;}
+.equipment-card:hover .equipment-card-label h4 {font-weight: 600;}
+.all-rentals-wrapper {margin-top: 50px}
 /* ============================================
    Features Strip
    ============================================ */
