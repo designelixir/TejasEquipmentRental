@@ -9,6 +9,11 @@
 :root {
   --reader-font: "canada-type-gibson", sans-serif;
   --off-black: #232121; 
+  --dark-orange: #DD3E08;
+  --orange: #C86D20;
+  --gray-1:  #F2EFED;  /* warm off-white, good for backgrounds */
+  --gray-2:    #D9D4D1;  /* warm light gray, borders/dividers */
+  --gray-3:  #A89F9B;
   --navy: #031726;
   --br: 4px;
   --max-width: 1200px;
@@ -61,8 +66,8 @@ button:hover {opacity: 1!important;}
 .search-container { width: 100%; height: 50px; border-radius: var(--br); }
 
 /* fonts */
-h2 {font-size: clamp(36px, 3vw, 48px)!important; font-weight: 600!important; margin: 25px 0!important; padding: 0!important; line-height: 1.15!important;}
-
+h2 {font-size: clamp(36px, 3vw, 48px)!important; font-weight: 600!important; margin: 15px 0!important; padding: 0!important; line-height: 1.15!important;}
+p {font-size: clamp(18px, 1vw, 22px)!important; margin: 5px 0!important; padding: 0!important;}
 /* Slider */
 
 .title {font-weight: 500!important;}
@@ -80,7 +85,7 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 .equipment-section-wrapper {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
 .equipment-section { max-width: var(--max-width)!important; width: 100%; }
-.equipment-section-heading-container {padding: 25px 0;}
+.equipment-section-heading-container {padding: 50px 0;}
 .equipment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 @media (max-width: 768px) {
@@ -91,7 +96,10 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
   .equipment-grid { grid-template-columns: 1fr; }
 }
 
+.equipment-card-image {background: white; aspect-ratio: 3/4; width: 100%; background-size: contain; background-position: center; background-repeat:no-repeat;}
+
 .equipment-card {
+  border: 2px solid var(--gray2);
   display: block;
   text-decoration: none;
   color: inherit;
