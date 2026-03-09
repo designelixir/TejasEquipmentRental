@@ -78,7 +78,7 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 /* Homepage Popular Equipment Grid */
 
-.equipment-section-wrapper {background: gray;}
+.equipment-section-wrapper {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
 .equipment-section {
   max-width: var(--max-width)!important;
   width: 100%;
