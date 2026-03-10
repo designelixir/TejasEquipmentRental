@@ -18,6 +18,7 @@
   --navy: #031726;
   --br: 4px;
   --max-width: 1200px;
+  --pad: clamp(15px, 2.5vw, 25px)
 }
 
 * {font-family: var(--reader-font)!important}
@@ -117,6 +118,17 @@ category {border: 2px solid blue; display: flex; align-items: center; justify-co
 .equipment-card-label h4 {text-transform: uppercase!important; font-weight: 400;}
 .equipment-card:hover .equipment-card-label h4 {font-weight: 600;}
 .all-rentals-wrapper {margin-top: 50px}
+
+/* Category Grid */
+#category-grid-body {width: 100%; border-top: 8px solid var(--orange); padding: var(--pad); background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
+#category-grid-body .content .category-primary {border: 2px solid var(--gray-2); display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; width: 100%;}
+
+#category-grid-body .category-img-container { width: 100%; aspect-ratio: 3/4; order: -1;}
+#category-grid-body .category-name-container { min-height: unset!important; display: flex; align-items: center; justify-content: flex-start; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/c0a9987623903fa7bd6265d0189248c1b03c8ee9/assets/title-bg.svg'); background-size: 90% auto; margin-top: -2px; background-repeat: no-repeat; background-position: 0% bottom; transition: all 0.2s ease; width: 100%;}
+#category-grid-body .category-primary:hover .category-name-container {background-size: 100% auto;}
+#category-grid-body .category-name-container .category-name {text-transform: uppercase!important; font-weight: 400;}
+#category-grid-body .category-primary:hover .category-name {font-weight: 600;}
+
 /* ============================================
    Features Strip
    ============================================ */
