@@ -28,6 +28,11 @@
 main {display: flex!important; width: 100%;}
 .router-container { max-width: unset!important; min-width: 100%;}
 
+/* Header */
+.storefront-container.new-look .header-container.header-container__new-look .navigation-menu-items .navigation-menu__primary {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; border: 1px solid red; background-size: cover;}
+
+.category-page-information { order: 2;  min-width: 100%;  display: flex; align-items: center; justify-content: center!important;}
+.breadcrumb {padding: 10px!important; display: flex; align-items: center; justify-content: flex-start; margin-bottom: 0!important; flex-grow: 1!important; display: flex; max-width: var(--max-width)!important; }
 
 /* flexbox */
 .flex-center-center {display: flex; align-items: center; justify-content: center; flex:1}
@@ -88,13 +93,14 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 /* Homepage Popular Equipment Grid */
 section {width: 100%;}
-.category-page-information {order: -1;}
 category {border: 2px solid blue; display: flex; align-items: center; justify-content: center; width: 100%; flex-direction: column; flex-grow: 1;}
 .category-title {border: 2px solid teal; min-width: 100vw; display: none;}
-.category-component .category-page-information .breadcrumb {min-width: 100vw; margin-bottom: -75px!important; padding: 25px 25px!important;}
+
+.home-component .container { max-width: var(--max-width); }
+
 .category-component {display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; min-width: 100vw; flex-grow: 1;}
-.category-header-content {display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; min-width: 100vw; flex-grow: 1;}
-.equipment-section-wrapper {border-top: 8px solid var(--orange);background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
+.category-header-content {display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; min-width: 100%; border: 1px solid lime; max-width: var(--max-width); flex-grow: 1;}
+.equipment-section-wrapper {border-top: 8px solid var(--orange)!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/grain.jpg'); background-size: cover;}
 .equipment-section { max-width: var(--max-width)!important; width: 100%; }
 .equipment-section-heading-container {padding: 50px 0;}
 .equipment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -124,8 +130,8 @@ category {border: 2px solid blue; display: flex; align-items: center; justify-co
 #category-grid-body .content .category-primary {border: 2px solid var(--gray-2); display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: column; width: 100%;}
 
 #category-grid-body .category-img-container { width: 100%; aspect-ratio: 3/4; order: -1;}
-#category-grid-body .category-name-container { min-height: unset!important; display: flex; align-items: center; justify-content: flex-start; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/c0a9987623903fa7bd6265d0189248c1b03c8ee9/assets/title-bg.svg'); background-size: 90% auto; margin-top: -2px; background-repeat: no-repeat; background-position: 0% bottom; transition: all 0.2s ease; width: 100%;}
-#category-grid-body .category-primary:hover .category-name-container {background-size: 100% auto;}
+#category-grid-body .category-name-container {filter: grayscale(1); min-height: unset!important; display: flex; align-items: center; justify-content: flex-start; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/c0a9987623903fa7bd6265d0189248c1b03c8ee9/assets/title-bg.svg'); background-size: 90% auto; margin-top: -2px; background-repeat: no-repeat; background-position: 0% bottom; transition: all 0.2s ease; width: 100%;}
+#category-grid-body .category-primary:hover .category-name-container {background-size: 100% 100%; filter: grayscale(0);}
 #category-grid-body .category-name-container .category-name {text-transform: uppercase!important; font-weight: 400;}
 #category-grid-body .category-primary:hover .category-name {font-weight: 600;}
 
