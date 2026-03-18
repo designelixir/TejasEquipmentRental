@@ -18,18 +18,18 @@
 
     <div class="tejas-footer-contact">
       <h4 class="tejas-footer-heading">Contact</h4>
-      <p><i class="fas fa-phone"></i> <a href="tel:2105902445">210-590-2445</a></p>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:info@tejasequipment.com">info@tejasequipment.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> San Antonio, TX</p>
+      <p class="tejas-footer-phone"><a href="tel:2105902445">210-590-2445</a></p>
+      <p class="tejas-footer-email"><a href="mailto:info@tejasequipment.com">info@tejasequipment.com</a></p>
+      <p class="tejas-footer-address">San Antonio, TX</p>
     </div>
 
     <div class="tejas-footer-social">
       <h4 class="tejas-footer-heading">Follow Us</h4>
       <div class="tejas-footer-social-icons">
-        <a href="#" aria-label="Facebook" class="tejas-footer-social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram" class="tejas-footer-social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn" class="tejas-footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="YouTube" class="tejas-footer-social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook" class="tejas-footer-social-icon tejas-footer-facebook"></a>
+        <a href="#" aria-label="Instagram" class="tejas-footer-social-icon tejas-footer-instagram"></a>
+        <a href="#" aria-label="LinkedIn" class="tejas-footer-social-icon tejas-footer-linkedin"></a>
+        <a href="#" aria-label="YouTube" class="tejas-footer-social-icon tejas-footer-youtube"></a>
       </div>
     </div>
 
@@ -43,4 +43,37 @@
 
 <script>
 document.getElementById('tejas-footer-year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+(function() {
+  if (!window.location.pathname.includes('/content/Home/')) return;
+
+  function attachSearch() {
+    var btn = document.getElementById('tejasSearchBtn');
+    var input = document.getElementById('tejasSearchInput');
+    if (!btn || !input) return; /* bail if elements arent there yet */
+
+    function doSearch() {
+      var val = input.value.trim();
+      if (val) {
+        window.location.href = '/portal/category/Search/0?search=' + encodeURIComponent(val) + '&page=1';
+      }
+    }
+
+    btn.addEventListener('click', doSearch);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') doSearch();
+    });
+  }
+
+  var observer = new MutationObserver(function() {
+    if (document.getElementById('tejasSearchBtn') && document.getElementById('tejasSearchInput')) {
+      observer.disconnect();
+      attachSearch();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
 </script>
