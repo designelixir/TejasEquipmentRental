@@ -133,7 +133,7 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 .home-component .container { max-width: var(--max-width); }
 
 .category-component {display: flex; align-items: center; justify-content: center; flex-direction: column; width: 100%; min-width: 100%; flex-grow: 1;}
-
+.per-page-container {justify-content: space-between; width: 100%; display: flex!important; align-items: center!important; justify-content: space-between!important; border: 1px solid teal; min-width: 100%;}
 .popular-equipment-section-wrapper {width: 100%!important; min-width: 100%!important; border-top: 8px solid var(--orange); margin-bottom: 75px; }
 .popular-equipment-section { max-width: var(--max-width)!important; width: 100%;  }
 .popular-equipment-section-heading-container {padding: 50px 0; text-align: center;}
@@ -275,11 +275,51 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 
 /* ABOUT PAGE */
-.about-hero {width: 100%; max-width: 100%; min-height: 600px; height: 60vh; background-image: url('https://cdn-legacy.porcloud.com/1144/5a1dc84f-a5cd-4c6e-9b4a-7a7a7b1339c9.png'); background-size: cover; background-position: center top;}
-.about-hero-inner {background: rgba(0,0,0,0.35); color: white; backdrop-filter: blur(3px); margin-top: 25px; padding: 50px 25px 75px!important; width: 80%!important; min-width: unset!important; max-width: unset!important;}
+.about-hero {width: 100%; max-width: 100%; padding-top: 30vh; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png'); background-size: cover; background-position: center top;}
+.about-hero-inner {background: rgba(0,0,0,0.35); color: white; backdrop-filter: blur(3px);  padding:25px!important; width: 80%!important; min-width: unset!important; max-width: unset!important;}
 
 .tejas-about-intro {width: 100%; background: var(--navy); border-top: 6px solid var(--orange); border-bottom: 1px solid rgba(255,255,255,0.08);}
 .tejas-about-intro-inner {max-width: var(--max-width); margin: 0 auto; padding: 80px var(--pad); display: flex; flex-direction: column; align-items: flex-start; gap: 20px;}
 .tejas-about-eyebrow {font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange);}
 .tejas-about-divider {width: 48px; height: 2px; background: var(--orange);}
 .tejas-about-body {font-size: clamp(1.1rem, 1.5vw, 1.35rem)!important; font-weight: 300; line-height: 1.75!important; color: var(--gray-1); max-width: 780px; margin: 0!important;}
+
+.tejas-story {width: 100%; background: var(--gray-1); border-bottom: 6px solid var(--orange);}
+.tejas-story-inner {max-width: var(--max-width); margin: 0 auto; padding: 80px var(--pad); display: flex; align-items: center; gap: 80px;}
+.tejas-story-text {flex: 1; display: flex; flex-direction: column; gap: 20px;}
+.tejas-story-body {font-size: clamp(1rem, 1.3vw, 1.2rem)!important; font-weight: 300; line-height: 1.8!important; color: var(--off-black); margin: 0!important;}
+
+.tejas-story-stat-col {display: flex; flex-direction: column; gap: 0; flex-shrink: 0; border-left: 3px solid var(--orange); padding-left: 50px;}
+.tejas-story-stat {display: flex; flex-direction: column; gap: 4px; padding: 20px 0; border-bottom: 1px solid var(--gray-2);}
+.tejas-story-stat:last-child {border-bottom: none;}
+.tejas-story-stat-num {font-size: clamp(2rem, 3vw, 2.75rem)!important; font-weight: 700; color: var(--orange); line-height: 1!important; margin: 0!important;}
+.tejas-story-stat-label {font-size: 12px!important; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gray-3); margin: 0!important;}
+
+@media (max-width: 700px) {
+  .tejas-story-inner {flex-direction: column; gap: 40px;}
+  .tejas-story-stat-col {border-left: none; border-top: 3px solid var(--orange); padding-left: 0; padding-top: 30px; flex-direction: row; flex-wrap: wrap; gap: 20px;}
+  .tejas-story-stat {border-bottom: none; padding: 0;}
+}
+
+.tejas-different {width: 100%; background: var(--off-black);}
+.tejas-different-inner {max-width: var(--max-width); margin: 0 auto; padding: 80px var(--pad); display: flex; flex-direction: column; gap: 32px;}
+.tejas-different-header {display: flex; flex-direction: column; gap: 16px;}
+.tejas-different-cols {display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;}
+.tejas-different-body {font-size: clamp(1rem, 1.2vw, 1.15rem)!important; font-weight: 300; line-height: 1.85!important; color: var(--gray-3); margin: 0!important;}
+
+@media (max-width: 700px) {
+  .tejas-different-cols {grid-template-columns: 1fr;}
+}
+
+/* CTA section */
+.tejas-cta {width: 100%; background: var(--orange);}
+.tejas-cta-inner {max-width: var(--max-width); margin: 0 auto; padding: 60px var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 40px;}
+.tejas-cta-heading {font-size: clamp(1.5rem, 2.5vw, 2rem)!important; font-weight: 600; color: white; margin: 0!important; padding: 0!important;}
+.tejas-cta-sub {font-size: clamp(0.9rem, 1.1vw, 1rem)!important; color: rgba(255,255,255,0.8); margin: 8px 0 0!important;}
+.tejas-cta-btn {flex-shrink: 0; background: white; color: var(--orange); padding: 16px 36px; border-radius: var(--br); font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.2s ease; white-space: nowrap;}
+.tejas-cta-btn:hover {background: var(--off-black); color: white;}
+
+@media (max-width: 600px) {
+  .tejas-cta-inner {flex-direction: column; align-items: flex-start;}
+  .tejas-cta-btn {width: 100%; text-align: center;}
+}
