@@ -130,11 +130,13 @@ menu .menu-container nav.navigation-horizontal ul.primary-menu li.menu-item ul.s
 
 /* fonts */
 h2 {font-size: clamp(36px, 3vw, 48px)!important; font-weight: 600!important; margin: 15px 0!important; padding: 0!important; line-height: 1.15!important;}
-h3 {font-size: clamp(1.5rem, 2.5vw, 2rem)!important; font-weight: 600;}
+h3 {font-size: clamp(1.5rem, 3vw, 1.75rem)!important; font-weight: 600;}
 h4 {font-size: 18px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;  margin-bottom: 1rem;}
 h6 {font-size: 14px; color:var(--gray-2); font-weight: 200; margin: 0!important; padding: 0!important;}
 p {font-size: clamp(1rem, 1.3vw, 1.2rem)!important; font-weight: 300; line-height: 1.5!important; color: var(--off-black); margin: 0!important;}
 p strong {font-size: clamp(1.2rem, 1.5vw, 1.4rem); font-weight: 400!important;}
+p a {color: var(--orange)!important}
+p a:hover {text-decoration: underline!important;}
 
 .orange-text {color: var(--light-orange)!important;}
 .white-text {color: white!important;}
@@ -155,6 +157,8 @@ p strong {font-size: clamp(1.2rem, 1.5vw, 1.4rem); font-weight: 400!important;}
 .orange-bg {background: var(--orange);}
 .orange-textured-bg {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover;}
 .forklift-bg {background-color: var(--off-black); background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/forklift-diagram.png'); background-size: cover; background-position: center; background-repeat: no-repeat;}
+
+.blur-container {background: rgba(0,0,0,0.35); color: white; backdrop-filter: blur(3px);}
 
 /* Slider */
 
@@ -312,7 +316,7 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 }
 
 
-.blur-container {background: rgba(0,0,0,0.35); color: white; backdrop-filter: blur(3px);}
+
 
 /* ABOUT PAGE */
 .about-hero {width: 100%; max-width: 100%; padding-top: 30vh; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png'); background-size: cover; background-position: center top;}
@@ -320,9 +324,13 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 /* our story section */
 .our-story-image-text img {margin-right: 25px;}
+.our-story-photo-gallery {gap: 1.5%;}
+.our-story-photo-gallery img {width: 32%;}
 @media (max-width: 700px) {
   .our-story-image-text img {margin-right: 0; width: 100%; margin-bottom: 25px;}
   .our-story-image-text {flex-direction: column;}
+  .our-story-photo-gallery {flex-direction: column;}
+  .our-story-photo-gallery img {width: 100%!important; margin: 10px;}
 }
 
 /* CTA section */
@@ -361,3 +369,32 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
   .staff-card{grid-template-columns:1fr;gap:24px}
   .staff-portrait{aspect-ratio:1/1;max-width:200px}
 }
+
+/* FAQ */
+
+.faq-section { width: 100%; border-top: 8px solid var(--orange); padding: var(--pad); }
+
+.faq-list { display: flex; flex-direction: column; gap: 2px; }
+
+.faq-item input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none; }
+
+.faq-item { background: var(--gray-1); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--br) var(--br) 0 0; overflow: hidden; width: 100%; margin: 10px 0; }
+.faq-item:hover { background: var(--gray-2); }
+
+.faq-label { display: flex; align-items: center; justify-content: space-between; padding: 15px var(--pad); cursor: pointer; transition: background 0.2s ease; user-select: none; }
+.faq-label:hover { background: rgba(255,255,255,0.07); }
+
+.faq-icon { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--orange); position: relative; transition: background 0.2s ease; display: flex; align-items: center; justify-content: center; }
+.faq-icon::before { content: '+'; font-size: 20px; line-height: 1; color: var(--orange); font-weight: 300; }
+
+.faq-body { background: var(--gray-1); max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+.faq-body-inner { padding: var(--pad); }
+
+.faq-answer ul { margin: 10px 0 10px 18px; display: flex; flex-direction: column; gap: 6px; }
+.faq-answer a { color: var(--light-orange); text-decoration: none; }
+.faq-answer a:hover { color: var(--dark-orange); }
+
+.faq-item input:checked ~ .faq-label { background: var(--light-orange); }
+.faq-item input:checked ~ .faq-label .faq-icon { background: white; }
+.faq-item input:checked ~ .faq-label .faq-icon::before { content: '−'; padding-bottom: 5px; color: var(--dark-orange); }
+.faq-item input:checked ~ .faq-body { max-height: 400px; }
