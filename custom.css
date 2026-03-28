@@ -371,7 +371,7 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 }
 
 /* FAQ */
-
+.faq-header {background-image: url('https://github.com/designelixir/TejasEquipmentRental/blob/main/assets/slide-800-5.jpg?raw=true'); background-size: cover; background-position: center;}
 .faq-section { width: 100%; border-top: 8px solid var(--orange); padding: var(--pad); }
 
 .faq-list { display: flex; flex-direction: column; gap: 2px; }
