@@ -130,7 +130,7 @@ menu .menu-container nav.navigation-horizontal ul.primary-menu li.menu-item ul.s
 
 /* fonts */
 h2 {font-size: clamp(36px, 3vw, 48px)!important; font-weight: 600!important; margin: 15px 0!important; padding: 0!important; line-height: 1.15!important;}
-h3 {font-size: clamp(24px, 2.5vw, 28px)!important;}
+h3 {font-size: clamp(1.5rem, 2.5vw, 2rem)!important; font-weight: 600;}
 h4 {font-size: 18px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;  margin-bottom: 1rem;}
 h6 {font-size: 14px; color:var(--gray-2); font-weight: 200; margin: 0!important; padding: 0!important;}
 p {font-size: clamp(1rem, 1.3vw, 1.2rem)!important; font-weight: 300; line-height: 1.5!important; color: var(--off-black); margin: 0!important;}
@@ -138,7 +138,8 @@ p strong {font-size: clamp(1.2rem, 1.5vw, 1.4rem); font-weight: 400!important;}
 
 .orange-text {color: var(--light-orange)!important;}
 .white-text {color: white!important;}
-
+.white-opaque-text {color: rgba(255,255,255,0.8);}
+.small-text {font-size: clamp(0.9rem, 1.1vw, 1rem)!important;}
 
 .centered-text {text-align: center;}
 .no-text-spacing {padding: 0!important; margin: 0!important;}
@@ -153,6 +154,7 @@ p strong {font-size: clamp(1.2rem, 1.5vw, 1.4rem); font-weight: 400!important;}
 .gray-1-bg {background: var(--gray-1); }
 .orange-bg {background: var(--orange);}
 .orange-textured-bg {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover;}
+.forklift-bg {background-color: var(--off-black); background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/forklift-diagram.png'); background-size: cover; background-position: center; background-repeat: no-repeat;}
 
 /* Slider */
 
@@ -333,9 +335,9 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 /* CTA section */
 .tejas-cta {width: 100%; background: var(--orange);}
-.tejas-cta-inner {max-width: var(--max-width); margin: 0 auto; padding: 60px var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 40px;}
-.tejas-cta-heading {font-size: clamp(1.5rem, 2.5vw, 2rem)!important; font-weight: 600; color: white; margin: 0!important; padding: 0!important;}
-.tejas-cta-sub {font-size: clamp(0.9rem, 1.1vw, 1rem)!important; color: rgba(255,255,255,0.8); margin: 8px 0 0!important;}
+.tejas-cta-inner {max-width: var(--max-width); backdrop-filter: blur(2px); margin: 0 auto; padding: 150px var(--pad); display: flex; align-items: center; justify-content: space-between; gap: 40px;}
+
+
 
 
 @media (max-width: 600px) {
