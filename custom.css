@@ -316,22 +316,14 @@ custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide
 
 /* ABOUT PAGE */
 .about-hero {width: 100%; max-width: 100%; padding-top: 30vh; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png'); background-size: cover; background-position: center top;}
-.about-hero-inner {max-width: 80%;}
-@media (max-width: 500px) {
-  .about-hero-inner { max-width: unset!important;}
+.about-hero-inner {max-width: 800px;}
+
+/* our story section */
+.our-story-image-text img {margin-right: 25px;}
+@media (max-width: 700px) {
+  .our-story-image-text img {margin-right: 0; width: 100%; margin-bottom: 25px;}
+  .our-story-image-text {flex-direction: column;}
 }
-
-
-.tejas-about-intro {width: 100%; background: var(--navy); border-top: 6px solid var(--orange); border-bottom: 1px solid rgba(255,255,255,0.08);}
-
-
-.tejas-about-body {font-size: clamp(1.1rem, 1.5vw, 1.35rem)!important; font-weight: 300; line-height: 1.75!important; color: var(--gray-1); max-width: 780px; margin: 0!important;}
-
-
-.tejas-story-stat {display: flex; flex-direction: column; gap: 4px; background: var(--light-orange); border-radius: var(--br);}
-.tejas-story-stat-num {font-size: clamp(2rem, 3vw, 2.75rem)!important; font-weight: 700; line-height: 1!important; margin: 0!important;}
-.tejas-story-stat-label {font-size: 12px!important; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;  margin: 0!important;}
-
 
 /* CTA section */
 .tejas-cta {width: 100%; background: var(--orange);}
