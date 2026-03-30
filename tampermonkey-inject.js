@@ -6,14 +6,11 @@
 // @connect      localhost
 // @run-at       document-end
 // ==/UserScript==
-
 (function () {
     const CSS_URL = 'http://localhost:8080/custom.css';
-    const HTML_URL = 'http://localhost:8080/home.html';
-    const POLL_MS = 1000;
+    const EVENTS_URL = 'http://localhost:8080/events';
 
-    // --- CSS ---
-    let styleEl = document.createElement('style');
+    var styleEl = document.createElement('style');
     styleEl.id = '__local-css-override';
     document.head.appendChild(styleEl);
 
@@ -21,36 +18,18 @@
         GM_xmlhttpRequest({
             method: 'GET',
             url: CSS_URL + '?t=' + Date.now(),
-            onload: r => { styleEl.textContent = r.responseText; }
+            onload: function(r) { styleEl.textContent = r.responseText; }
         });
     }
 
     loadCSS();
-    setInterval(loadCSS, POLL_MS);
 
-    // --- HTML ---
-    function injectHTML(html) {
-        if (!window.location.pathname.includes('/content/Home/')) return;
-        const target = document.querySelector('.custom-content.ng-star-inserted');
-        if (target) target.innerHTML = html;
-    }
-
-    function loadHTML() {
-        GM_xmlhttpRequest({
-            method: 'GET',
-            url: HTML_URL + '?t=' + Date.now(),
-            onload: r => { injectHTML(r.responseText); }
-        });
-    }
-
-    const observer = new MutationObserver(() => {
-        if (!window.location.pathname.includes('/content/Home/')) return;
-        if (document.querySelector('.custom-content.ng-star-inserted')) {
-            observer.disconnect();
-            loadHTML();
-            setInterval(loadHTML, POLL_MS);
+    GM_xmlhttpRequest({
+        method: 'GET',
+        url: EVENTS_URL,
+        headers: { 'Accept': 'text/event-stream' },
+        onreadystatechange: function(r) {
+            if (r.responseText.includes('data: reload')) loadCSS();
         }
     });
-
-    observer.observe(document.body, { childList: true, subtree: true });
 })();

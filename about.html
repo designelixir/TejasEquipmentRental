@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="custom.css">
-
-<section class="about-hero flex-center-start ">
+<section class="about-hero flex-end-start ">
   <div class="about-hero-inner full-width blur-container">
         <div class="section-padding-xl flex-start-start flex-column">
             <h1 class="white-text">About Us</h1>
@@ -12,7 +10,7 @@
 </section>
 
 <!-- Our Story Section / What Makes us Different -->
-<section class="section-padding-xl gray-1-bg full-width">
+<section class="our-story-section section-padding-xl gray-1-bg full-width">
   <div class="flex-start-start flex-column basic-gap">
     <h2>Our Story</h2>
     
@@ -35,11 +33,90 @@
   </div>
 </section>
 
+
+
+<!-- Staff Highlight Section -->
+<section class="staff-slider-section orange-textured-bg white-text full-width">
+  <div class="staff-slider-section-inner flex-start-start flex-column">
+  <h4>Staff Spotlight</h4>
+  <h2>The People Behind Tejas</h2>
+
+  <div class="slides-wrapper">
+    <div class="slides-track flex-start-start" id="track">
+
+      <div class="staff-card basic-padding">
+        <div class="staff-portrait full-width" style="background-image:url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png')"></div>
+        <div class="staff-info flex-start-start flex-column">
+          
+          <h3 class="white-text no-text-spacing">Staff Member #1</h3>
+          <h4 class="white-text no-text-spacing staff-card-job">Owner &amp; Operator</h4>
+          <div class="white-divider"></div>
+          <p class="staff-bio white-text">Lorem ipsum dolor sit amet, qui salutandi moderatius ad, omnesque adipisci definitionem eum no. Tollit tempor euismod nec cu, discere elaboraret an vel. Facer fabellas honestatis cum an. Pertinax perpetua eos at. Sit ex eirmod volumus, primis audire luptatum id mel. Cum movet eleifend te, his in elit laoreet omittam, idque indoctum eam in.</p>
+          <div class="staff-fun-facts flex-start-start flex-column">
+            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf095;</span> 25+ years in equipment rental</h6>
+            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf3c5;</span> San Antonio, TX</h6>
+          </div>
+        </div>
+      </div>
+      <div class="staff-card basic-padding">
+        <div class="staff-portrait full-width" style="background-image:url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png')"></div>
+        <div class="staff-info flex-start-start flex-column">
+          
+          <h3 class="white-text no-text-spacing">Staff Member #2</h3>
+          <h4 class="white-text no-text-spacing staff-card-job">Owner &amp; Operator</h4>
+          <div class="white-divider"></div>
+          <p class="staff-bio white-text">Lorem ipsum dolor sit amet, qui salutandi moderatius ad, omnesque adipisci definitionem eum no. Tollit tempor euismod nec cu, discere elaboraret an vel. Facer fabellas honestatis cum an. Pertinax perpetua eos at. Sit ex eirmod volumus, primis audire luptatum id mel. Cum movet eleifend te, his in elit laoreet omittam, idque indoctum eam in.</p>
+          <div class="staff-fun-facts flex-start-start flex-column">
+            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf095;</span> 25+ years in equipment rental</h6>
+            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf3c5;</span> San Antonio, TX</h6>
+          </div>
+        </div>
+      </div>
+      <div class="staff-card basic-padding">
+        <div class="staff-portrait full-width" style="background-image:url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png')"></div>
+        <div class="staff-info flex-start-start flex-column">
+          
+          <h3 class="white-text no-text-spacing">Staff Member #3</h3>
+          <h4 class="white-text no-text-spacing staff-card-job">Owner &amp; Operator</h4>
+          <div class="white-divider"></div>
+          <p class="staff-bio white-text">Lorem ipsum dolor sit amet, qui salutandi moderatius ad, omnesque adipisci definitionem eum no. Tollit tempor euismod nec cu, discere elaboraret an vel. Facer fabellas honestatis cum an. Pertinax perpetua eos at. Sit ex eirmod volumus, primis audire luptatum id mel. Cum movet eleifend te, his in elit laoreet omittam, idque indoctum eam in.</p>
+          <div class="staff-fun-facts flex-start-start flex-column">
+            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf095;</span> 25+ years in equipment rental</h6>
+            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf3c5;</span> San Antonio, TX</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-footer basic-margin-top flex-center-spacebetween">
+    <div class="dots basic-gap flex-center-start" id="dots"></div>
+    <h6 class="slide-counter white-text" id="counter">1 / 3</h6>
+    <div class="arrow-btns basic-gap flex-center-end">
+      <button class="arrow-btn" onclick="changeSlide(-1)">&#8249;</button>
+      <button class="arrow-btn" onclick="changeSlide(1)">&#8250;</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="about-cta forklift-bg">
+  <div class="about-cta-inner">
+    <div class="about-cta-text">
+      <h3 class="white-text">Ready to Get to Work?</h3>
+      <p class="white-opaque-text small-text">Browse our full equipment catalog and find exactly what your job needs.</p>
+    </div>
+    <a href="/portal/menu/Rent/8994" class="white-button">Browse All Rentals</a>
+  </div>
+</section>
+
+
 <!-- Why Choose Us / tenets -->
-<section class="tenets-section full-width" >
+<!-- <section class="tenets-section full-width" >
   <div class="tenets-header-wrapper">
     <div class="centered-text flex-center-center flex-column navy-blur-bg" style="padding: 6rem clamp(24px, 5vw, 80px) 200px;">
-      <h4 class="white-text">Why Choose Us</h4>
+      <h4 class="orange-text">Why Choose Us</h4>
       <div class="divider"></div>
       <h2 class="tenets-title centered-text">Our Commitment to Every Customer</h2>
     </div>
@@ -128,83 +205,7 @@
 
   </div>
 
-</section>
-
-<!-- Staff Highlight Section -->
-<section class="staff-slider-section orange-textured-bg white-text full-width">
-  <h4>Staff Spotlight</h4>
-  <h2>The People Behind Tejas</h2>
-
-  <div class="slides-wrapper">
-    <div class="slides-track flex-start-start" id="track">
-
-      <div class="staff-card basic-padding">
-        <div class="staff-portrait full-width" style="background-image:url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png')"></div>
-        <div class="staff-info flex-start-start flex-column">
-          
-          <h3 class="white-text no-text-spacing">Staff Member #1</h3>
-          <h4 class="white-text no-text-spacing staff-card-job">Owner &amp; Operator</h4>
-          <div class="white-divider"></div>
-          <p class="staff-bio white-text">Lorem ipsum dolor sit amet, qui salutandi moderatius ad, omnesque adipisci definitionem eum no. Tollit tempor euismod nec cu, discere elaboraret an vel. Facer fabellas honestatis cum an. Pertinax perpetua eos at. Sit ex eirmod volumus, primis audire luptatum id mel. Cum movet eleifend te, his in elit laoreet omittam, idque indoctum eam in.</p>
-          <div class="staff-fun-facts flex-start-start flex-column">
-            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf095;</span> 25+ years in equipment rental</h6>
-            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf3c5;</span> San Antonio, TX</h6>
-          </div>
-        </div>
-      </div>
-      <div class="staff-card basic-padding">
-        <div class="staff-portrait full-width" style="background-image:url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png')"></div>
-        <div class="staff-info flex-start-start flex-column">
-          
-          <h3 class="white-text no-text-spacing">Staff Member #2</h3>
-          <h4 class="white-text no-text-spacing staff-card-job">Owner &amp; Operator</h4>
-          <div class="white-divider"></div>
-          <p class="staff-bio white-text">Lorem ipsum dolor sit amet, qui salutandi moderatius ad, omnesque adipisci definitionem eum no. Tollit tempor euismod nec cu, discere elaboraret an vel. Facer fabellas honestatis cum an. Pertinax perpetua eos at. Sit ex eirmod volumus, primis audire luptatum id mel. Cum movet eleifend te, his in elit laoreet omittam, idque indoctum eam in.</p>
-          <div class="staff-fun-facts flex-start-start flex-column">
-            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf095;</span> 25+ years in equipment rental</h6>
-            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf3c5;</span> San Antonio, TX</h6>
-          </div>
-        </div>
-      </div>
-      <div class="staff-card basic-padding">
-        <div class="staff-portrait full-width" style="background-image:url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/group.png')"></div>
-        <div class="staff-info flex-start-start flex-column">
-          
-          <h3 class="white-text no-text-spacing">Staff Member #3</h3>
-          <h4 class="white-text no-text-spacing staff-card-job">Owner &amp; Operator</h4>
-          <div class="white-divider"></div>
-          <p class="staff-bio white-text">Lorem ipsum dolor sit amet, qui salutandi moderatius ad, omnesque adipisci definitionem eum no. Tollit tempor euismod nec cu, discere elaboraret an vel. Facer fabellas honestatis cum an. Pertinax perpetua eos at. Sit ex eirmod volumus, primis audire luptatum id mel. Cum movet eleifend te, his in elit laoreet omittam, idque indoctum eam in.</p>
-          <div class="staff-fun-facts flex-start-start flex-column">
-            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf095;</span> 25+ years in equipment rental</h6>
-            <h6 class="staff-detail"><span class="staff-detail-icon">&#xf3c5;</span> San Antonio, TX</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="slider-footer basic-margin-top flex-center-spacebetween">
-    <div class="dots basic-gap flex-center-start" id="dots"></div>
-    <h6 class="slide-counter white-text" id="counter">1 / 3</h6>
-    <div class="arrow-btns basic-gap flex-center-end">
-      <button class="arrow-btn" onclick="changeSlide(-1)">&#8249;</button>
-      <button class="arrow-btn" onclick="changeSlide(1)">&#8250;</button>
-    </div>
-  </div>
-</section>
-
-<!-- Call to Action -->
-<section class="forklift-bg">
-  <div class="tejas-cta-inner">
-    <div class="tejas-cta-text">
-      <h3 class="white-text">Ready to Get to Work?</h3>
-      <p class="white-opaque-text small-text">Browse our full equipment catalog and find exactly what your job needs.</p>
-    </div>
-    <a href="/portal/menu/Rent/8994" class="white-button">Browse All Rentals</a>
-  </div>
-</section>
-
-
+</section> -->
 <script>
 var current = 0;
 var cards = document.querySelectorAll('.staff-card');
@@ -213,12 +214,14 @@ var dotsEl = document.getElementById('dots');
 var counter = document.getElementById('counter');
 var total = cards.length;
 
+if (cards){
 cards.forEach(function(_,i){
   var d = document.createElement('div');
   d.className = 'dot'+(i===0?' active':'');
   d.onclick = function(){ goTo(i); };
   dotsEl.appendChild(d);
 });
+}
 
 function goTo(n){
   current = (n+total)%total;
