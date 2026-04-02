@@ -18,9 +18,9 @@
 
     <div class="tejas-footer-contact">
       <h4 class="tejas-footer-heading">Contact</h4>
-      <p class="tejas-footer-phone"><a href="tel:2105902445">210-590-2445</a></p>
-      <p class="tejas-footer-email"><a href="mailto:info@tejasequipment.com">info@tejasequipment.com</a></p>
-      <p class="tejas-footer-address"><a target="_blank" href="https://maps.app.goo.gl/JS7DauYyhq3H9RGi8">S6380 Randolph Blvd, <br>San Antonio, TX 78233</a></p>
+      <p class="tejas-footer-phone"><a class="white-text" href="tel:2105902445">210-590-2445</a></p>
+      <p class="tejas-footer-email"><a class="white-text" href="mailto:info@tejasequipment.com" target="_blank">info@tejasequipment.com</a></p>
+      <p class="tejas-footer-address"><a class="white-text" target="_blank" href="https://maps.app.goo.gl/JS7DauYyhq3H9RGi8">S6380 Randolph Blvd, <br>San Antonio, TX 78233</a></p>
     </div>
 
     <div class="tejas-footer-social flex-end-start flex-column">
@@ -50,36 +50,29 @@
 <script>
 document.getElementById('tejas-footer-year').textContent = new Date().getFullYear();
 </script>
-
 <script>
-(function() {
-  if (!window.location.pathname.includes('/content/Home/')) return;
+var current = 0;
+var cards = document.querySelectorAll('.staff-card');
+var track = document.getElementById('track');
+var dotsEl = document.getElementById('dots');
+var counter = document.getElementById('counter');
+var total = cards.length;
 
-  function attachSearch() {
-    var btn = document.getElementById('tejasSearchBtn');
-    var input = document.getElementById('tejasSearchInput');
-    if (!btn || !input) return; /* bail if elements arent there yet */
+if (cards){
+cards.forEach(function(_,i){
+  var d = document.createElement('div');
+  d.className = 'dot'+(i===0?' active':'');
+  d.onclick = function(){ goTo(i); };
+  dotsEl.appendChild(d);
+});
+}
 
-    function doSearch() {
-      var val = input.value.trim();
-      if (val) {
-        window.location.href = '/portal/category/Search/0?search=' + encodeURIComponent(val) + '&page=1';
-      }
-    }
+function goTo(n){
+  current = (n+total)%total;
+  track.style.transform = 'translateX(-'+current+'00%)';
+  document.querySelectorAll('.dot').forEach(function(d,i){ d.classList.toggle('active',i===current); });
+  counter.textContent = (current+1)+' / '+total;
+}
 
-    btn.addEventListener('click', doSearch);
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') doSearch();
-    });
-  }
-
-  var observer = new MutationObserver(function() {
-    if (document.getElementById('tejasSearchBtn') && document.getElementById('tejasSearchInput')) {
-      observer.disconnect();
-      attachSearch();
-    }
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-})();
+function changeSlide(dir){ goTo(current+dir); }
 </script>
