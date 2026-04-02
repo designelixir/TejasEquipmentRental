@@ -112,7 +112,7 @@ button:hover {opacity: 1!important;}
 .orange-textured-bg {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover;}
 .forklift-bg {background-color: var(--off-black); background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/forklift-diagram.png'); background-size: cover; background-position: center; background-repeat: no-repeat;}
 .orange-gradient-bg {background: linear-gradient(to top, #e58945 0%, rgba(229, 138, 71, 0.98) 15%, rgba(230, 144, 80, 0.94) 28%, rgba(232, 153, 95, 0.86) 41%, rgba(235, 167, 116, 0.74) 54%, rgba(239, 184, 143, 0.60) 66%, rgba(244, 205, 177, 0.42) 78%, rgba(249, 230, 215, 0.21) 90%, rgba(255, 255, 255, 0) 100%);}
-.grid-bg {background-image: url('');}
+.grid-bg {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/629bba92e729d14a39c45d8f7b76a510f2206156/assets/grid-bg.svg'); background-size: 100% auto;}
 
 .blur-container {background: rgba(0,0,0,0.35); color: white; backdrop-filter: blur(3px);}
 
