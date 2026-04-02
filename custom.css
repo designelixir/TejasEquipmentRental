@@ -2,7 +2,7 @@
   --reader-font: "canada-type-gibson", sans-serif;
   --off-black: #232121; 
   --off-black-opaque: rgba(35, 33, 33, 0.75); 
-  --dark-orange: #DD3E08;
+  --dark-orange: #FF472B;
   --orange: #C86D20;
   --light-orange: #DE7536;
   --gray-1:  #F2EFED;  /* warm off-white, good for backgrounds */
@@ -112,7 +112,7 @@ button:hover {opacity: 1!important;}
 .orange-textured-bg {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover;}
 .forklift-bg {background-color: var(--off-black); background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/forklift-diagram.png'); background-size: cover; background-position: center; background-repeat: no-repeat;}
 .orange-gradient-bg {background: linear-gradient(to top, #e58945 0%, rgba(229, 138, 71, 0.98) 15%, rgba(230, 144, 80, 0.94) 28%, rgba(232, 153, 95, 0.86) 41%, rgba(235, 167, 116, 0.74) 54%, rgba(239, 184, 143, 0.60) 66%, rgba(244, 205, 177, 0.42) 78%, rgba(249, 230, 215, 0.21) 90%, rgba(255, 255, 255, 0) 100%);}
-.grid-bg {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/629bba92e729d14a39c45d8f7b76a510f2206156/assets/grid-bg.svg'); background-size: 100% auto;}
+.grid-bg {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/4b3f6ce1592b52c6c5b36da5609bfc480bc43156/assets/grid_1.svg'); background-size: 100% auto;}
 
 .blur-container {background: rgba(0,0,0,0.35); color: white; backdrop-filter: blur(3px);}
 
@@ -121,17 +121,7 @@ button:hover {opacity: 1!important;}
 .ngx-pagination {display: flex!important; justify-content: center; align-items: center;}
 pagination-controls {display: flex!important;}
 
-/* Slider */
 
-.title {font-weight: 500!important;}
-custom-slider.large {min-height: 600px!important}
-.slider-wrapper {min-height: 600px!important; display: flex; align-items: center; justify-content: center;}
-
-.slide-main__left {background: rgba(0,0,0,0.35); backdrop-filter: blur(3px); margin-top: 25px; padding: 50px 25px 75px!important; width: 80%!important; min-width: unset!important; max-width: unset!important;}
-.slide-main__right {display: none!important;}
-custom-slider swiper-container.custom-slider swiper-slide .slider-wrapper .slide-main { margin: unset!important;  padding: 0!important; align-items: center; justify-content: flex-start!important; max-height: 80%;}
-.swiper-button-next button {color: var(--navy)!important;}
-.swiper-container {align-items: stretch; height: 100%;}
 
 /* Homepage Popular Equipment Grid */
 .popular-equipment-section-wrapper {width: 100%!important; min-width: 100%!important; border-top: 8px solid var(--orange); margin-bottom: 75px; }
@@ -371,7 +361,7 @@ storefront-app { max-width: unset!important;}
 
 
 /* Header */
-.storefront-container.new-look .header-container.header-container__new-look .navigation-menu-items .navigation-menu__primary {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover;}
+.storefront-container.new-look .header-container.header-container__new-look .navigation-menu-items .navigation-menu__primary {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover; background-position: 100% bottom;}
 
 .breadcrumb {display: flex!important; align-items: center; justify-content: flex-start; flex-wrap: wrap;;}
 .breadcrumb:not(:has(li)) { display: none; }
@@ -548,6 +538,7 @@ item-rate-scale {order: 2;}
 .powered-by {background: unset; border: unset; color: var(--gray-1)}
 
 /* Mailing list / reviews */
+.mailing-reviews-wrapper {margin-top: 50px}
 .reviews-container {gap: var(--pad)}
 .review {max-width: 350px; border-radius: 15px; background: var(--gray-1); border: 2px solid #e0e0e0; padding: var(--pad);}
 .review p {font-size: 14px!important}
@@ -555,10 +546,9 @@ item-rate-scale {order: 2;}
 .review-name {margin-top: 10px!important;}
 .review-tail {height: 50px; width: 100%; margin-top: -1px; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/c0d7c6e067264d041a182cfca3c9a6cbe3eb401a/assets/quote-tail.svg'); background-size: 40px; background-repeat: no-repeat; background-position: center top;}
 
+.heavy-equipment-image {height: 500px; margin-top: -200px; width: 100%; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/equipment-row.png'); background-size: auto 500px; background-repeat: no-repeat; background-position: center top;}
 
-.mailing-list-container {margin-top: 50px; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/equipment-row.png');  background-size: auto 400px; background-position: center top; background-repeat: no-repeat;}
-.mailing-list-container-inner {padding: 100px var(--pad); width: 100%; backdrop-filter: blur(3px); }
-.mailing-list-wrapper {background: white; max-width: 800px; border-radius: var(--br)}
+.mailing-list-wrapper {background: rgba(255,255,255,0.85); backdrop-filter: blur(2px); max-width: 800px; margin: -100px var(--pad) 100px; border-radius: var(--br)}
 
 @media screen and (max-width: 1100px){
   .reviews-container {flex-direction: column;}
@@ -566,3 +556,5 @@ item-rate-scale {order: 2;}
   .review-wrapper:nth-child(odd) .review-tail {background-position: 15% top;}
   .review-wrapper:nth-child(even) .review-tail {background-position: 85% top;}
 }
+
+input {padding: 10px; border-radius: 2px; border: 1px solid #eee;}
