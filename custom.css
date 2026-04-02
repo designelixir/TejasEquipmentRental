@@ -1,16 +1,16 @@
 :root {
   --reader-font: "canada-type-gibson", sans-serif;
-  --off-black: #232121; 
-  --off-black-opaque: rgba(35, 33, 33, 0.75); 
-  --dark-orange: #FF472B;
-  --orange: #C86D20;
-  --light-orange: #DE7536;
+  --off-black: #161712; 
+  --off-black-opaque: rgba(22, 23, 18, 0.75); 
+  --dark-orange: #CC1F00;
+  --orange: #FF472B;
+  --light-orange: #FF6047;
   --gray-1:  #F2EFED;  /* warm off-white, good for backgrounds */
   --gray-2:    #D9D4D1;  /* warm light gray, borders/dividers */
-  --gray-3:  #A89F9B;
-  --off-white: #f5f5f5;
-  --navy: #031726;
-  --navy-opaque: rgba(3, 23, 38, 0.5);
+  --gray-3:  #E7DADA;
+  --off-white: #EEE5E5;
+  --navy: #161712;
+  --navy-opaque: rgba(22, 23, 18, 0.25);
   --br: 4px;
   --pad: clamp(15px, 2.5vw, 25px);
   --max-width: 1200px;
@@ -89,7 +89,7 @@ p a:hover {text-decoration: underline!important;}
 /* Buttons */
 button {font-weight: 600!important; letter-spacing: 0.5px; opacity: 0.8; transition: opacity 0.3s ease;}
 button:hover {opacity: 1!important;}
-.button {flex-shrink: 0; background: var(--light-orange); color: var(--gray-1)!important; padding: 16px 36px; border-radius: var(--br); font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.2s ease; white-space: nowrap; cursor: pointer!important;}
+.button {flex-shrink: 0; background: var(--orange); color: white!important; padding: 16px 36px; border-radius: var(--br); font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.2s ease; white-space: nowrap; cursor: pointer!important;}
 .button:hover {background: var(--dark-orange); color: white!important;}
 .white-button {flex-shrink: 0; background: white; color: var(--orange)!important; border: 2px solid var(--orange); padding: 16px 36px; border-radius: var(--br); font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.2s ease; white-space: nowrap;}
 .white-button:hover {background: var(--light-orange); color: white; border: 2px solid var(--light-orange);}
@@ -124,7 +124,7 @@ pagination-controls {display: flex!important;}
 
 
 /* Homepage Popular Equipment Grid */
-.popular-equipment-section-wrapper {width: 100%!important; min-width: 100%!important; border-top: 8px solid var(--orange); margin-bottom: 75px; }
+.popular-equipment-section-wrapper {width: 100%!important; min-width: 100%!important; border-top: 8px solid var(--off-black); margin-bottom: 75px; }
 .popular-equipment-section { width: 100%; max-width: var(--max-width)}
 .popular-equipment-section-heading-container {padding: 50px 0; text-align: center;}
 .popular-equipment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -220,6 +220,7 @@ pagination-controls {display: flex!important;}
 .tejas-footer-contact p { color: var(--gray-3) !important; font-size: 14px !important; margin-bottom: 10px !important; display: flex; align-items: center; gap: 8px; }
 .tejas-footer-phone::before, .tejas-footer-email::before, .tejas-footer-address::before { font-family: 'Font Awesome 5 Free'; font-weight: 900; color: var(--orange); width: 16px; text-align: center; flex-shrink: 0; }
 
+.tejas-footer-phone, .tejas-footer-email, .tejas-footer-address {color: white;}
 .tejas-footer-phone::before  { content: '\f095'; } /* fa-phone */
 .tejas-footer-email::before  { content: '\f0e0'; } /* fa-envelope */
 .tejas-footer-address::before { content: '\f3c5'; } /* fa-map-marker-alt */
@@ -361,7 +362,8 @@ storefront-app { max-width: unset!important;}
 
 
 /* Header */
-.storefront-container.new-look .header-container.header-container__new-look .navigation-menu-items .navigation-menu__primary {background-color: unset!important; background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/tejas%20header.jpg')!important; background-size: cover; background-position: 100% bottom;}
+.navigation-menu-items {background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/587b7052d6861d74622e853b8b80153a1e40705a/assets/header-bg-2.svg')!important; background-size: cover; background-position: end bottom; background-repeat: no-repeat;}
+.storefront-container.new-look .header-container.header-container__new-look .navigation-menu-items .navigation-menu__primary {background-color: unset!important; }
 
 .breadcrumb {display: flex!important; align-items: center; justify-content: flex-start; flex-wrap: wrap;;}
 .breadcrumb:not(:has(li)) { display: none; }
