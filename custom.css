@@ -373,7 +373,7 @@ span.displayed-company-store-info {margin-right: 10px!important; background: var
 .store-picker-loaded {max-width: 100%!important; }
 .store-picker-loaded .store-picker-options .store-picker-found-locations-container {overflow-y: auto!important;}
 a.company-link:has(.noimage) h1 { background-image: url(https://cdn-legacy.porcloud.com/1144/dD7B0XN5nGlVOA3DpF63ifEUTkBrjXxjP6pyHxAuyRJZb5gxWi0t3u0yoFkmwbCpccGgAKoTsgB9SZMBt%2B9TIw%3D%3D..png); 
-  background-repeat: no-repeat; background-size: contain; height: 130px !important; width: 180px !important; background-position: center top; display: flex !important; align-items: flex-end; justify-content: flex-start; font-size: 14px!important; padding: 0!important; margin: 0!important; }
+  background-repeat: no-repeat; background-size: auto 120px; height: 150px !important; width: 225px !important; background-position: center top; display: flex !important; align-items: flex-end; justify-content: flex-start; font-size: 14px!important; padding: 0!important; margin: 0!important; }
 storefront-app { max-width: unset!important;}
 
 .router-container {width: 100%; max-width: var(--max-width)!important; padding: var(--pad)!important;}
@@ -431,13 +431,15 @@ storefront-app { max-width: unset!important;}
     .storefront-container.new-look .header-container.header-container__new-look .navigation-menu-items .navigation-menu__primary.user-dates .user-dates__nav {display: flex!important; grid-template-columns: unset!important;}
 }
 
+
+
 @media screen and (max-width: 767px){
   header {min-width: calc(100vw - 15px)!important;}
   .storefront-container.new-look .header-container__new-look .primary-header .company-branding-mobile a.company-link {max-width: unset!important;}
   .storefront-container.new-look .header-container__new-look .primary-header .company-branding-mobile {width: 100%; align-items: flex-start!important; justify-content: flex-start!important;}
   .page-wrapper { max-width: calc(100vw - 15px)}
-  .company-link {height: 150px!important; min-width: 150px!important; padding: var(--pad);  display: flex; align-items: flex-start; justify-content: flex-start; text-align: left; }
-  .company-logo {margin: unset!important}
+  .company-link {height: 175px!important; min-width: 175px!important; max-width: 300px!important; padding: var(--pad);  display: flex; align-items: flex-start; justify-content: flex-start; text-align: left; }
+  .company-logo {margin: unset!important;}
   .company-link img {max-height: 100px!important; }
   .mobile-header {display: flex; align-items: center; justify-content: flex-start!important;}
   .mobile-header hamburger-menu {order: 2;}
