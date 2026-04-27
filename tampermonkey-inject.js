@@ -4,15 +4,14 @@
 // @match        https://tejas-equipment-rental.rentalesign.com/*
 // @grant        GM_xmlhttpRequest
 // @connect      localhost
+// @require      file:///C:/meganbyers/Desktop/TejasEquipmentRentals/modifiers.js
 // @run-at       document-end
 // ==/UserScript==
 (function () {
     const CSS_URL = 'http://localhost:8080/custom.css';
-
     var styleEl = document.createElement('style');
     styleEl.id = '__local-css-override';
     document.head.appendChild(styleEl);
-
     GM_xmlhttpRequest({
         method: 'GET',
         url: CSS_URL + '?t=' + Date.now(),

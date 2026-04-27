@@ -3,11 +3,11 @@
 <section class="home-hero flex-center-start basic-padding">
   <div class="home-hero-inner basic-padding">
     <h2>What can we help you with today?</h2>
-    <p><i>Here is a search prompt</i></p>
+    <p><i>Search equipment names or categories</i></p>
     <div class="search-bar-wrapper">
       <div class="search-bar-inner">
         <input type="text" class="search-bar-input" placeholder="Search equipment..." id="tejasSearchInput">
-        <button class="search-bar-btn" id="tejasSearchBtn" aria-label="Search">
+        <button class="search-bar-btn" onclick="tejasSearch()" aria-label="Search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -159,37 +159,72 @@
       <h2 class="centered-text">What Our Customers Have to Say</h2>
       <p class="centered-text">We couldn't do it without your support. Check out what some of our star customers have to say about Tejas Equipment Rentals!</p>
     </div>
-    <div class="reviews-container flex-center-center basic-padding">
-      <div class="review-wrapper flex-center-center flex-column">
-        <div class="review">
-          <p><i>Casidy, Tommy and everyone else I have interacted with at Tejas Equipment Rental San Marcos has been extremely helpful.  They have delivered equipment on very short notice and with a very reasonable delivery charge.  They have gone above and beyond to address any issue I have had during the course of multiple rentals.  Customer service before, during and after every rental has been exemplary!.  They will be my go-to for rentals going forward.</i></p>
-          <p class="review-name"><strong>- Scott H.</strong></p>
+    <div class="flex-center-center">
+      <button class="arrow-btn" onclick="rotateReviews()">&#8249;</button>
+      <div id="reviewsContainer1" class="reviews-container flex-center-center basic-padding">
+        <div class="review-wrapper flex-center-center flex-column">
+          <div class="review">
+            <p><i>Casidy, Tommy and everyone else I have interacted with at Tejas Equipment Rental San Marcos has been extremely helpful.  They have delivered equipment on very short notice and with a very reasonable delivery charge.  They have gone above and beyond to address any issue I have had during the course of multiple rentals.  Customer service before, during and after every rental has been exemplary!.  They will be my go-to for rentals going forward.</i></p>
+            <p class="review-name"><strong>- Scott H.</strong></p>
+          </div>
+          <div class="review-tail"></div>
         </div>
-        <div class="review-tail"></div>
-      </div>
 
-      <div class="review-wrapper flex-center-center flex-column">
-        <div class="review">
-          <p><i>Thanks for all of the hard work. We value our partnership with you guys and look forward many years to come.  For those reading, I recommend this location with out any hesitation or reservation. Quintessential professionals all around. Now, let's get to work!</i></p>
-          <p class="review-name"><strong>- Josh P.</strong></p>
+        <div class="review-wrapper flex-center-center flex-column">
+          <div class="review">
+            <p><i>Thanks for all of the hard work. We value our partnership with you guys and look forward many years to come.  For those reading, I recommend this location with out any hesitation or reservation. Quintessential professionals all around. Now, let's get to work!</i></p>
+            <p class="review-name"><strong>- Josh P.</strong></p>
+          </div>
+          <div class="review-tail"></div>
         </div>
-        <div class="review-tail"></div>
-      </div>
-      
         
-      <div class="review-wrapper flex-center-center flex-column">
-        <div class="review">
-          <p><i>Our company normally requires the use of lift rental equipment needed for our job sites. Tejas Equipment Rental is our go to place to rent from when we need scissor lifts or towable man-lifts to get our installation projects done. Hector and the rest of the team at Tejas Equipment have provided great service to us over the years and we are fully happy to continue renting from them moving forward.</i></p>
-          <p class="review-name"><strong>- Jorge S.</strong></p>
+          
+        <div class="review-wrapper flex-center-center flex-column">
+          <div class="review">
+            <p><i>Our company normally requires the use of lift rental equipment needed for our job sites. Tejas Equipment Rental is our go to place to rent from when we need scissor lifts or towable man-lifts to get our installation projects done. Hector and the rest of the team at Tejas Equipment have provided great service to us over the years and we are fully happy to continue renting from them moving forward.</i></p>
+            <p class="review-name"><strong>- Jorge S.</strong></p>
+          </div>
+          <div class="review-tail"></div>
         </div>
-        <div class="review-tail"></div>
-      </div>
 
-      
-      
+        
+        
+      </div>
+      <div id="reviewsContainer2" class="reviews-container flex-center-center basic-padding">
+        <div class="review-wrapper flex-center-center flex-column">
+          <div class="review">
+            <p><i>These guys went above and beyond to get me the equipment I need for an emergency project. I couldn't get other stores to even return my calls but Cassidy and Andrew had the sky track I needed delivered to the site the very next morning. Tejas will always be my company's first call for rental equipment.</i></p>
+            <p class="review-name"><strong>- Heckel Built Construction</strong></p>
+          </div>
+          <div class="review-tail"></div>
+        </div>
+
+        <div class="review-wrapper flex-center-center flex-column">
+          <div class="review">
+            <p><i>I rented a trailer and scissor lift. The equipment was maintained like new. The Trailer had good tires and very clean. Lift worked perfectly, unlike many I rented from other rental companies. On our way back from the job a large Buck ran into the side of the trailer crushing the solid steel fender into the new tire. It was late and we were out in the middle of nowhere. I expected to get hammered for the damage, but they were understanding and forgave the damage. I will always rent my equipment from this Tejas.</i></p>
+            <p class="review-name"><strong>- Tracy D.</strong></p>
+          </div>
+          <div class="review-tail"></div>
+        </div>
+
+        <div class="review-wrapper flex-center-center flex-column">
+          <div class="review">
+            <p><i>If I could I would give Tejas a 10 star review. I work with Denise for Heavy Equipment and with Isabel for Big John Site Services. I always have fantastic, responsive service. Fair pricing, and great equipment. If I have a job anywhere near a Tejas location they are the first people I call. I wish I could use them on every job.</i></p>
+            <p class="review-name"><strong>- Tom C.</strong></p>
+          </div>
+          <div class="review-tail"></div>
+        </div>
+        
+          
+        
+
+        
+        
+      </div>
+      <button class="arrow-btn" onclick="rotateReviews()">&#8250;</button>
     </div>
-    <div class="flex-center-center full-width basic-padding">
-      <a class="button white-button">Leave Us a Review on Google</a>
+    <div class="flex-center-center full-width basic-padding google-review-wrapper">
+            <a class="button white-button" id="homepageGoogleReviewsButton">Leave Us a Review on Google</a>
     </div>
     <div class="heavy-equipment-image"></div>
   </section>
@@ -201,9 +236,24 @@
       <div class="basic-padding mailing-list-wrapper flex-center-center flex-column full-width">
         <h2 style="margin: 25px 0">Join our mailing list!</h2>
         <p class="centered-text">Enter your email below for occasional promotions, inventory updates and more from Tejas Equipment Rental locations across Texas. You may unsubscribe at any time.</p>
-        <input class="full-width basic-margin-top" placeholder="youremail@gmail.com"></input>
-        <a class="button basic-margin-top" href="">Sign Up</a>
-        <!-- <script type="text/javascript" src="https://form.jotform.com/jsform/260711454584155"></script> -->
+        <form action="https://submit.jotform.com/submit/260711454584155" method="post" style="margin-top: 25px;">
+          <input type="hidden" name="formID" value="260711454584155" />
+          <input type="hidden" name="simple_spc" value="260711454584155-260711454584155" />
+
+          <div class="flex-center-center full-width">
+          <input type="text" id="first_4" name="q4_name[first]" placeholder="First Name"/>
+          <input type="text" id="last_4" name="q4_name[last]" placeholder="Last Name"/>
+          </div>
+
+          
+          <input style="margin-bottom: 25px;" class="full-width" type="email" id="input_3" name="q3_email" required placeholder="youremail@emailprovider.com"/>
+
+          <p class="small-text centered-text"><i>By clicking Join Mailing List, you consent to receive promotional emails from Tejas Equipment Rentals. You can unsubscribe at any time.</i></p>
+         
+          <div class="flex-center-center" style="margin-top: 25px;">
+            <button type="submit" class="dark-orange-button">Join Mailing List</button>
+          </div>
+      </form>
       </div>
     
   </section>
