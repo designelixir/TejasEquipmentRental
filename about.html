@@ -1,12 +1,23 @@
-<section class="about-hero flex-end-start ">
-  <div class="about-hero-inner full-width blur-container">
-        <div class="section-padding-xl flex-start-start flex-column">
-            <h1 class="white-text">About Us</h1>
-            <p class="white-text"><strong>At Tejas Equipment Rentals, we provide top-notch construction rental equipment and tools for contractors, builders, and businesses across Texas. From earthmoving to aerial and everything in between, we make sure our customers have the right tools to get the job done safely, efficiently, and on time. With convenient locations and a responsive delivery network, we serve the Lone Star State with reliability and pride.</strong></p>
-            <a href="/locations" class="button basic-margin-top">Our Locations</a>
-        </div>
+<section class="about-hero flex-end-start" style="position: relative; overflow: hidden;">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline
+    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <source src="https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/TejasSizzleReel-resized.mp4" type="video/mp4">
+  </video>
+
+  <!-- Overlay -->
+  <div style="position: absolute; inset: 0; background: var(--off-black-opaque); z-index: 1;"></div>
+
+  <!-- Content -->
+  <div class="about-hero-inner full-width" style="position: relative; z-index: 2;">
+    <div class="section-padding-xl flex-start-start flex-column">
+      <h1 class="white-text">About Us</h1>
+      <p class="white-text"><strong>At Tejas Equipment Rentals, we provide top-notch construction rental equipment and tools for contractors, builders, and businesses across Texas. From earthmoving to aerial and everything in between, we make sure our customers have the right tools to get the job done safely, efficiently, and on time. With convenient locations and a responsive delivery network, we serve the Lone Star State with reliability and pride.</strong></p>
+      <a href="/locations" class="button basic-margin-top">Our Locations</a>
     </div>
   </div>
+
 </section>
 
 <!-- Our Story Section / What Makes us Different -->
@@ -14,9 +25,17 @@
   <div class="flex-start-start flex-column basic-gap">
     <h2>Our Story</h2>
     
-    <div class="flex-start-start our-story-image-text">
-      <img src="https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/about-us-1.jpg" alt="Vintage tejas photo">
-      <p>Founded in 1975, Tejas has been family-owned and operated for over five decades. What started as a local operation in South Texas has grown into the trusted name in equipment rentals across Texas. Through every generation, one thing has stayed the same: our commitment to honest work, dependable service, and treating our customers like family.</p>
+    <div class="flex-start-start flex-column">
+      
+      <h3>Founded in 1975, Tejas has been family-owned and operated for over five decades. What started as a local operation in South Texas has grown into the trusted name in equipment rentals across Texas. Through every generation, one thing has stayed the same: our commitment to honest work, dependable service, and treating our customers like family.</h3>
+      <div class="basic-margin-top flex-start-start our-story-photo-gallery">
+        <img src="https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/about-us-1.jpg" alt="Vintage tejas photo">
+        <img src="https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/about-us-3.jpg" alt="aerial photo of team with equipment">
+        <img src="https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/about-us-5.jpg" alt="orange cherry picker with tejas branding">
+      </div>
+      <div class="">
+        
+      </div>
     </div>
     
     <br>
