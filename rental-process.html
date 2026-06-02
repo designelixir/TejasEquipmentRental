@@ -1,0 +1,102 @@
+<!-- How It Works Section -->
+<div class="how-it-works-wrapper section-padding" style="width: 100%; border-top: 8px solid var(--dark-orange);">
+  <div class="flex-start-center flex-column" style="max-width: var(--max-width); width: 100%; margin: 0 auto; gap: 48px;">
+
+    <!-- Header -->
+    <div class="flex-start-center flex-column" style="gap: 8px;">
+      <h2 class="centered-text">How It Works</h2>
+      <div class="divider"></div>
+      <p class="centered-text" style="max-width: 560px;">Renting equipment is simple. Here's what to expect.</p>
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="how-it-works-grid full-width">
+
+      <!-- Step 1 -->
+      <div class="how-it-works-card">
+        <div class="how-it-works-img-placeholder" style="background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/steps-1.jpg')"></div>
+        <div class="flex-start-center flex-column basic-padding" style="gap: 10px;">
+          <span class="tenet-number">Step 01</span>
+          <div class="tenet-divider"></div>
+          <h3>Find Your Equipment</h3>
+          <p>Browse our inventory online and find the right machine for your job. Don't see what you're looking for? Give us a call — we love helping customers find exactly what they need.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="how-it-works-card">
+        <div class="how-it-works-img-placeholder" style="background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/steps-2.jpg')"></div>
+        <div class="flex-start-center flex-column basic-padding" style="gap: 10px;">
+          <span class="tenet-number">Step 02</span>
+          <div class="tenet-divider"></div>
+          <h3>Place Your Order</h3>
+          <p>Ready to go? Rent online in minutes or call any of our 8 Texas locations. Our friendly rental coordinators are ready to help make the process easy.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="how-it-works-card">
+        <div class="how-it-works-img-placeholder" style="background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/steps-3.jpg')"></div>
+        <div class="flex-start-center flex-column basic-padding" style="gap: 10px;">
+          <span class="tenet-number">Step 03</span>
+          <div class="tenet-divider"></div>
+          <h3>Confirm Your Reservation</h3>
+          <p>Once we receive your request, our team will reach out if we need any additional details. We want to make sure we get you the right equipment, at the right place, at the right time.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="how-it-works-card">
+        <div class="how-it-works-img-placeholder" style="background-image: url('https://raw.githubusercontent.com/designelixir/TejasEquipmentRental/refs/heads/main/assets/steps-4.jpg')"></div>
+        <div class="flex-start-center flex-column basic-padding" style="gap: 10px;">
+          <span class="tenet-number">Step 04</span>
+          <div class="tenet-divider"></div>
+          <h3>We'll Take It From There</h3>
+          <p>You'll hear from us with confirmation of your pickup or delivery details. If you've requested delivery, just make sure you or your representative are on site when we arrive. After that, get to work!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .how-it-works-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .how-it-works-card {
+    border: 2px solid var(--gray-2);
+    background: white;
+    border-radius: var(--br);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .how-it-works-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .how-it-works-img-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-3);
+  }
+
+  @media (max-width: 900px) {
+    .how-it-works-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 540px) {
+    .how-it-works-grid { grid-template-columns: 1fr; }
+  }
+</style>
