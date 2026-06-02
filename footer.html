@@ -50,16 +50,7 @@
 <script>
 document.getElementById('tejas-footer-year').textContent = new Date().getFullYear();
 
-// About Page
-var currentSlide = 0;
 
-function changeSlide(dir) {
-    var cards = document.querySelectorAll('.staff-card');
-    cards[currentSlide].classList.add('staff-card-hidden');
-    currentSlide = (currentSlide + dir + cards.length) % cards.length;
-    cards[currentSlide].classList.remove('staff-card-hidden');
-    document.getElementById('counter').innerHTML = (currentSlide + 1) + ' / ' + cards.length;
-}
 
 // Locations
 var locationsMeta = [
